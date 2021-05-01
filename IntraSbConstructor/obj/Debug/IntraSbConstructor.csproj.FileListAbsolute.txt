@@ -1,0 +1,15 @@
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\bin\Debug\IntraSbConstructor.exe.config
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\bin\Debug\IntraSbConstructor.exe
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\bin\Debug\IntraSbConstructor.pdb
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.csprojAssemblyReference.cache
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.FillOrbitForm.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.MainForm.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.Properties.Resources.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.csproj.GenerateResource.cache
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.csproj.CoreCompileInputs.cache
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.exe
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.pdb
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.AutoGradient.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.GeometryForm.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.IntervalColor.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.CubeForm.resources
