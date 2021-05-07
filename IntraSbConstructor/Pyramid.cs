@@ -6,17 +6,32 @@ using System.Threading.Tasks;
 
 namespace IntraSbConstructor
 {
-    class Pyramid
+    public class Pyramid
     {
-        private double height { get; set; }
-        private double length { get; set; }
-        private double width { get; set; }
+        public double Height { get; set; }
+        public double Length { get; set; }
+        public double Width { get; set; }
         
-        public double GetCenterY(double h)
+        public double GetCenterY() => Height / 2;
+        
+        public double GetSideCenterX() => (Height / 2) * Math.Tan(90);
+        
+        public double GetSideLength()
         {
-            return h / 2;
+            double diagonal = Math.Sqrt(Width*Width + Length * Length);
+            return Math.Sqrt(Math.Pow(diagonal / 2, 2) + Height * Height);
         }
 
+        public double GetSidePosX() => Width / 4;
 
+        public double GetSidePosZ() => Length / 4;
+        
+        public double GetDegreesY() =>  Math.Atan2(Width, Length) * 180 / Math.PI;
+
+        public double GetDegreesZ()
+        {
+            double diagonal = Math.Sqrt(Width * Width + Length * Length);
+            return Math.Atan2(Height, (diagonal / 2)) * 180 / Math.PI;
+        }
     }
 }

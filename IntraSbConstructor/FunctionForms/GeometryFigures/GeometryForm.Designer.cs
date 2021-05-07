@@ -54,7 +54,6 @@ namespace IntraSbConstructor
             // Btn_Pyramid
             // 
             this.Btn_Pyramid.BackColor = System.Drawing.Color.White;
-            this.Btn_Pyramid.Enabled = false;
             this.Btn_Pyramid.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Btn_Pyramid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(49)))), ((int)(((byte)(35)))));
             this.Btn_Pyramid.Location = new System.Drawing.Point(135, 12);
@@ -63,6 +62,7 @@ namespace IntraSbConstructor
             this.Btn_Pyramid.TabIndex = 49;
             this.Btn_Pyramid.Text = "Pyramid";
             this.Btn_Pyramid.UseVisualStyleBackColor = false;
+            this.Btn_Pyramid.Click += new System.EventHandler(this.Btn_Pyramid_Click);
             // 
             // Btn_Prism
             // 
