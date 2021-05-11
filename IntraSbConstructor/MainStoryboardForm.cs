@@ -41,6 +41,7 @@ namespace IntraSbConstructor
                 result += $"{{\"time\":{time},\"data\":[\"AddEnvironmentObject\",\"1,{sunName + "Sat"}\"]}},";
                 result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteSensitivity\",\"{sunName + "Sat"},0\"]}},";
                 result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteRadius\",\"{sunName + "Sat"},0\"]}},";
+                result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteTrailWidth\",\"{sunName + "Sat"},0\"]}},";
                 time += 0.001;
                 if (stack)
                 {
@@ -197,6 +198,49 @@ namespace IntraSbConstructor
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_Grid_Click(object sender, EventArgs e)
+        {
+            GridForm gridForm = new GridForm();
+            if (gridForm.ShowDialog() == DialogResult.OK)
+            {
+                string result = Txt_Result.Text;
+                decimal time = gridForm.UpDn_Time.Value;
+                string name = gridForm.Txt_Name.Text;
+                var countY = gridForm.GetRowsCountY();
+                var countX = gridForm.GetRowsCountX();
+                decimal positionX = -gridForm.UpDn_GridWidth.Value / 2;
+                decimal positionY = -gridForm.UpDn_GridHeight.Value / 2;
+                for (decimal h = 0, i = 0; positionY <= gridForm.UpDn_GridHeight.Value / 2; h++) // Moving through all Y rows
+                {
+                    positionX = -gridForm.UpDn_GridWidth.Value / 2;
+                    for (decimal w = 0; positionX <= gridForm.UpDn_GridWidth.Value / 2; w++,i++) // filling X row with suns
+                    {
+                        result += $"{{\"time\":{time},\"data\":[\"AddEnvironmentObject\",\"{gridForm.ObjType},{name + i}\"]}},";
+                        result += $"{{\"time\":{time + 0.0003M},\"data\":[\"SetPosition\",\"{name + i},{positionX},{positionY},1\"]}},";
+                        positionX += gridForm.UpDn_XSpace.Value;
+                    }
+                    positionY += gridForm.UpDn_YSpace.Value;
+                }
+                if (gridForm.Chb_WeldToSatellite.Checked)
+                {
+                    result += $"{{\"time\":{time},\"data\":[\"AddEnvironmentObject\",\"1,{gridForm.Txt_SatName.Text}\"]}},";
+                    result += $"{{\"time\":{time + 0.0001M},\"data\":[\"SetSatelliteSensitivity\",\"{gridForm.Txt_SatName.Text},0\"]}},";
+                    result += $"{{\"time\":{time + 0.0001M},\"data\":[\"SetSatelliteRadius\",\"{gridForm.Txt_SatName.Text},0\"]}},";
+                    result += $"{{\"time\":{time + 0.0001M},\"data\":[\"SetSatelliteTrailWidth\",\"{gridForm.Txt_SatName.Text},0\"]}},";
+                    for (decimal h = 0, i = 0; h <= countY; h++) 
+                    {
+
+                        for (decimal w = 0; w <= countX; w++, i++)
+                        {
+                            result += $"{{\"time\":{time + 0.0002M},\"data\":[\"SetParent\",\"{name + i},{gridForm.Txt_SatName.Text}\"]}},";
+                        }
+                            
+                    }
+                }
+                Txt_Result.Text += result;
+            }
         }
     }
 }

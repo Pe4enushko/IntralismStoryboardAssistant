@@ -35,6 +35,7 @@ namespace IntraSbConstructor
             this.IntervalColor = new System.Windows.Forms.Button();
             this.Btn_AutoGradient = new System.Windows.Forms.Button();
             this.Btn_GmFigures = new System.Windows.Forms.Button();
+            this.Btn_Grid = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_FillOrbit
@@ -122,12 +123,28 @@ namespace IntraSbConstructor
             this.Btn_GmFigures.UseVisualStyleBackColor = false;
             this.Btn_GmFigures.Click += new System.EventHandler(this.Btn_GmFigures_Click);
             // 
-            // MainForm
+            // Btn_Grid
+            // 
+            this.Btn_Grid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Btn_Grid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Grid.Font = new System.Drawing.Font("Orator Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Grid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(105)))), ((int)(((byte)(56)))));
+            this.Btn_Grid.Location = new System.Drawing.Point(28, 211);
+            this.Btn_Grid.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Btn_Grid.Name = "Btn_Grid";
+            this.Btn_Grid.Size = new System.Drawing.Size(161, 34);
+            this.Btn_Grid.TabIndex = 8;
+            this.Btn_Grid.Text = "Grid";
+            this.Btn_Grid.UseVisualStyleBackColor = false;
+            this.Btn_Grid.Click += new System.EventHandler(this.Btn_Grid_Click);
+            // 
+            // MainStoryboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(105)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(830, 374);
+            this.Controls.Add(this.Btn_Grid);
             this.Controls.Add(this.Btn_GmFigures);
             this.Controls.Add(this.Btn_AutoGradient);
             this.Controls.Add(this.IntervalColor);
@@ -139,7 +156,7 @@ namespace IntraSbConstructor
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "MainStoryboardForm";
             this.ShowIcon = false;
             this.Text = "Storyboard assistant";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -155,6 +172,7 @@ namespace IntraSbConstructor
         private System.Windows.Forms.Button IntervalColor;
         private System.Windows.Forms.Button Btn_AutoGradient;
         private System.Windows.Forms.Button Btn_GmFigures;
+        private System.Windows.Forms.Button Btn_Grid;
     }
 }
 

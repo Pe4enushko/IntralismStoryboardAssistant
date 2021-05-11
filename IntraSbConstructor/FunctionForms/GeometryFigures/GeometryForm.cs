@@ -32,9 +32,10 @@ namespace IntraSbConstructor
                 string SunName = cube.Txt_ObjName.Text + "S";
                 // spawning satellite
                 result += $"{{\"time\":{time},\"data\":[\"AddEnvironmentObject\",\"1,{cube.Txt_ObjName.Text}\"]}},";
-                result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteSensitivity\",\"{cube.Txt_ObjName.Text},0\"]}},";
-                result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteRadius\",\"{cube.Txt_ObjName.Text},0\"]}},";
-                result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteRotationSpeed\",\"{cube.Txt_ObjName.Text},0\"]}},";
+                result += $"{{\"time\":{time + 0.0001},\"data\":[\"SetSatelliteSensitivity\",\"{cube.Txt_ObjName.Text},0\"]}},";
+                result += $"{{\"time\":{time + 0.0001},\"data\":[\"SetSatelliteRadius\",\"{cube.Txt_ObjName.Text},0\"]}},";
+                result += $"{{\"time\":{time + 0.0001},\"data\":[\"SetSatelliteRotationSpeed\",\"{cube.Txt_ObjName.Text},0\"]}},";
+                result += $"{{\"time\":{time + 0.0001},\"data\":[\"SetSatelliteTrailWidth\",\"{cube.Txt_ObjName.Text},0\"]}},";
                 // spawning suns
                 for (int i = (int)cube.UpDn_FirstNum.Value; i < 12 + cube.UpDn_FirstNum.Value; i++)
                 {
@@ -89,6 +90,7 @@ namespace IntraSbConstructor
                 result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteSensitivity\",\"{name},0\"]}},";
                 result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteRadius\",\"{name},0\"]}},";
                 result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteRotationSpeed\",\"{name},0\"]}},";
+                result += $"{{\"time\":{time + 0.001},\"data\":[\"SetSatelliteTrailWidth\",\"{name},0\"]}},";
                 // spawning suns
                 for (int i = (int)pyramidForm.UpDn_FirstNum.Value; i < 4 + pyramidForm.UpDn_FirstNum.Value; i++)
                 {

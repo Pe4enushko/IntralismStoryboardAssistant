@@ -14,3 +14,4 @@ C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\I
 C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.CubeForm.resources
 C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.PyramidForm.resources
 C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.MainStoryboardForm.resources
+C:\Users\Mr.stone\source\repos\IntraSbConstructor\IntraSbConstructor\obj\Debug\IntraSbConstructor.GridForm.resources
