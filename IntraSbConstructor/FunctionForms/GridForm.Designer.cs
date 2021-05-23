@@ -49,11 +49,15 @@ namespace IntraSbConstructor
             this.label9 = new System.Windows.Forms.Label();
             this.Txt_SatName = new System.Windows.Forms.TextBox();
             this.Lb_SatName = new System.Windows.Forms.Label();
+            this.Lb_Z = new System.Windows.Forms.Label();
+            this.UpDn_PosZ = new System.Windows.Forms.NumericUpDown();
+            this.Chb_PosZ = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_GridHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_GridWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_XSpace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_Time)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_YSpace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDn_PosZ)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_Cancel
@@ -62,7 +66,7 @@ namespace IntraSbConstructor
             this.Btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Btn_Cancel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Btn_Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(47)))), ((int)(((byte)(32)))));
-            this.Btn_Cancel.Location = new System.Drawing.Point(241, 96);
+            this.Btn_Cancel.Location = new System.Drawing.Point(379, 158);
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(81, 29);
             this.Btn_Cancel.TabIndex = 8;
@@ -75,7 +79,7 @@ namespace IntraSbConstructor
             this.Btn_Enter.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Btn_Enter.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Btn_Enter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(47)))), ((int)(((byte)(32)))));
-            this.Btn_Enter.Location = new System.Drawing.Point(241, 54);
+            this.Btn_Enter.Location = new System.Drawing.Point(379, 123);
             this.Btn_Enter.Name = "Btn_Enter";
             this.Btn_Enter.Size = new System.Drawing.Size(81, 29);
             this.Btn_Enter.TabIndex = 9;
@@ -99,7 +103,7 @@ namespace IntraSbConstructor
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(12, 118);
+            this.label2.Location = new System.Drawing.Point(216, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 60;
@@ -111,7 +115,7 @@ namespace IntraSbConstructor
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 168);
+            this.label3.Location = new System.Drawing.Point(117, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 18);
             this.label3.TabIndex = 61;
@@ -122,7 +126,7 @@ namespace IntraSbConstructor
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(159, 147);
+            this.label4.Location = new System.Drawing.Point(60, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 18);
             this.label4.TabIndex = 62;
@@ -137,7 +141,7 @@ namespace IntraSbConstructor
             // 
             // UpDn_GridHeight
             // 
-            this.UpDn_GridHeight.Location = new System.Drawing.Point(15, 139);
+            this.UpDn_GridHeight.Location = new System.Drawing.Point(219, 86);
             this.UpDn_GridHeight.Name = "UpDn_GridHeight";
             this.UpDn_GridHeight.Size = new System.Drawing.Size(88, 20);
             this.UpDn_GridHeight.TabIndex = 64;
@@ -145,7 +149,7 @@ namespace IntraSbConstructor
             // 
             // UpDn_GridWidth
             // 
-            this.UpDn_GridWidth.Location = new System.Drawing.Point(15, 189);
+            this.UpDn_GridWidth.Location = new System.Drawing.Point(120, 86);
             this.UpDn_GridWidth.Name = "UpDn_GridWidth";
             this.UpDn_GridWidth.Size = new System.Drawing.Size(88, 20);
             this.UpDn_GridWidth.TabIndex = 65;
@@ -158,14 +162,14 @@ namespace IntraSbConstructor
             0,
             0,
             65536});
-            this.UpDn_XSpace.Location = new System.Drawing.Point(120, 189);
+            this.UpDn_XSpace.Location = new System.Drawing.Point(21, 165);
             this.UpDn_XSpace.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.UpDn_XSpace.Name = "UpDn_XSpace";
-            this.UpDn_XSpace.Size = new System.Drawing.Size(88, 20);
+            this.UpDn_XSpace.Size = new System.Drawing.Size(96, 20);
             this.UpDn_XSpace.TabIndex = 66;
             this.UpDn_XSpace.ValueChanged += new System.EventHandler(this.UpDn_GridDensity_ValueChanged);
             // 
@@ -192,7 +196,7 @@ namespace IntraSbConstructor
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(117, 168);
+            this.label7.Location = new System.Drawing.Point(18, 144);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 18);
             this.label7.TabIndex = 71;
@@ -203,7 +207,7 @@ namespace IntraSbConstructor
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(231, 168);
+            this.label8.Location = new System.Drawing.Point(132, 144);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 18);
             this.label8.TabIndex = 73;
@@ -217,7 +221,7 @@ namespace IntraSbConstructor
             0,
             0,
             65536});
-            this.UpDn_YSpace.Location = new System.Drawing.Point(234, 189);
+            this.UpDn_YSpace.Location = new System.Drawing.Point(135, 165);
             this.UpDn_YSpace.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -230,7 +234,7 @@ namespace IntraSbConstructor
             // Chb_WeldToSatellite
             // 
             this.Chb_WeldToSatellite.AutoSize = true;
-            this.Chb_WeldToSatellite.Location = new System.Drawing.Point(123, 70);
+            this.Chb_WeldToSatellite.Location = new System.Drawing.Point(345, 29);
             this.Chb_WeldToSatellite.Name = "Chb_WeldToSatellite";
             this.Chb_WeldToSatellite.Size = new System.Drawing.Size(102, 17);
             this.Chb_WeldToSatellite.TabIndex = 74;
@@ -265,9 +269,9 @@ namespace IntraSbConstructor
             // Txt_SatName
             // 
             this.Txt_SatName.Enabled = false;
-            this.Txt_SatName.Location = new System.Drawing.Point(123, 118);
+            this.Txt_SatName.Location = new System.Drawing.Point(345, 85);
             this.Txt_SatName.Name = "Txt_SatName";
-            this.Txt_SatName.Size = new System.Drawing.Size(88, 20);
+            this.Txt_SatName.Size = new System.Drawing.Size(93, 20);
             this.Txt_SatName.TabIndex = 78;
             this.Txt_SatName.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
@@ -277,18 +281,69 @@ namespace IntraSbConstructor
             this.Lb_SatName.Enabled = false;
             this.Lb_SatName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Lb_SatName.ForeColor = System.Drawing.Color.Black;
-            this.Lb_SatName.Location = new System.Drawing.Point(120, 92);
+            this.Lb_SatName.Location = new System.Drawing.Point(342, 59);
             this.Lb_SatName.Name = "Lb_SatName";
             this.Lb_SatName.Size = new System.Drawing.Size(94, 18);
             this.Lb_SatName.TabIndex = 77;
             this.Lb_SatName.Text = "Satellite name";
             this.Lb_SatName.Click += new System.EventHandler(this.Label5_Click);
             // 
+            // Lb_Z
+            // 
+            this.Lb_Z.AutoSize = true;
+            this.Lb_Z.Enabled = false;
+            this.Lb_Z.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Lb_Z.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Lb_Z.Location = new System.Drawing.Point(231, 144);
+            this.Lb_Z.Name = "Lb_Z";
+            this.Lb_Z.Size = new System.Drawing.Size(123, 18);
+            this.Lb_Z.TabIndex = 80;
+            this.Lb_Z.Text = "How to call that (Z)";
+            // 
+            // UpDn_PosZ
+            // 
+            this.UpDn_PosZ.DecimalPlaces = 2;
+            this.UpDn_PosZ.Enabled = false;
+            this.UpDn_PosZ.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.UpDn_PosZ.Location = new System.Drawing.Point(249, 164);
+            this.UpDn_PosZ.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.UpDn_PosZ.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.UpDn_PosZ.Name = "UpDn_PosZ";
+            this.UpDn_PosZ.Size = new System.Drawing.Size(88, 20);
+            this.UpDn_PosZ.TabIndex = 79;
+            // 
+            // Chb_PosZ
+            // 
+            this.Chb_PosZ.AutoSize = true;
+            this.Chb_PosZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Chb_PosZ.Location = new System.Drawing.Point(249, 122);
+            this.Chb_PosZ.Name = "Chb_PosZ";
+            this.Chb_PosZ.Size = new System.Drawing.Size(100, 19);
+            this.Chb_PosZ.TabIndex = 81;
+            this.Chb_PosZ.Text = "Enable Z axis";
+            this.Chb_PosZ.UseVisualStyleBackColor = true;
+            this.Chb_PosZ.CheckedChanged += new System.EventHandler(this.Chb_PosZ_CheckedChanged);
+            // 
             // GridForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 229);
+            this.ClientSize = new System.Drawing.Size(472, 205);
+            this.Controls.Add(this.Chb_PosZ);
+            this.Controls.Add(this.Lb_Z);
+            this.Controls.Add(this.UpDn_PosZ);
             this.Controls.Add(this.Txt_SatName);
             this.Controls.Add(this.Lb_SatName);
             this.Controls.Add(this.label9);
@@ -311,11 +366,13 @@ namespace IntraSbConstructor
             this.Controls.Add(this.Btn_Cancel);
             this.Name = "GridForm";
             this.Text = "GridForm";
+            this.Load += new System.EventHandler(this.GridForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_GridHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_GridWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_XSpace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_Time)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDn_YSpace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDn_PosZ)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +400,8 @@ namespace IntraSbConstructor
         public System.Windows.Forms.CheckBox Chb_WeldToSatellite;
         public System.Windows.Forms.TextBox Txt_SatName;
         private System.Windows.Forms.Label Lb_SatName;
+        private System.Windows.Forms.Label Lb_Z;
+        public System.Windows.Forms.NumericUpDown UpDn_PosZ;
+        public System.Windows.Forms.CheckBox Chb_PosZ;
     }
 }

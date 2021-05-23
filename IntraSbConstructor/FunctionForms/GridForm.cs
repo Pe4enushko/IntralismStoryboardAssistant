@@ -70,5 +70,15 @@ namespace IntraSbConstructor
             Lb_SatName.Enabled = Chb_WeldToSatellite.Checked;
             Txt_SatName.Enabled = Chb_WeldToSatellite.Checked;
         }
+
+        private void GridForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Chb_PosZ_CheckedChanged(object sender, EventArgs e)
+        {
+            Lb_Z.Enabled = UpDn_PosZ.Enabled = Chb_PosZ.Checked;
+        }
     }
 }

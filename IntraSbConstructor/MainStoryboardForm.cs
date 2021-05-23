@@ -212,14 +212,16 @@ namespace IntraSbConstructor
                 var countX = gridForm.GetRowsCountX();
                 decimal positionX = -gridForm.UpDn_GridWidth.Value / 2;
                 decimal positionY = -gridForm.UpDn_GridHeight.Value / 2;
-                for (decimal h = 0, i = 0; positionY <= gridForm.UpDn_GridHeight.Value / 2; h++) // Moving through all Y rows
+                decimal positionZ = gridForm.UpDn_PosZ.Value;
+                for (decimal i = 0; positionY <= gridForm.UpDn_GridHeight.Value / 2;) // Moving through all Y rows
                 {
                     positionX = -gridForm.UpDn_GridWidth.Value / 2;
-                    for (decimal w = 0; positionX <= gridForm.UpDn_GridWidth.Value / 2; w++,i++) // filling X row with suns
+                    while (positionX <= gridForm.UpDn_GridWidth.Value / 2) // filling X row with suns
                     {
                         result += $"{{\"time\":{time},\"data\":[\"AddEnvironmentObject\",\"{gridForm.ObjType},{name + i}\"]}},";
-                        result += $"{{\"time\":{time + 0.0003M},\"data\":[\"SetPosition\",\"{name + i},{positionX},{positionY},1\"]}},";
+                        result += $"{{\"time\":{time + 0.0003M},\"data\":[\"SetPosition\",\"{name + i},{positionX},{positionY},{positionZ}\"]}},";
                         positionX += gridForm.UpDn_XSpace.Value;
+                        i++;
                     }
                     positionY += gridForm.UpDn_YSpace.Value;
                 }
